@@ -1,0 +1,21 @@
+1.use redursers 
+2. use memo
+3. contectx api
+4. bundlers
+5. single stor multi store
+6. reduse method
+7. did copy shallow copy
+8. 
+
+
+var fruits = ["apple", "banana", "orange", "mango"];
+var index = fruits.indexOf("banana");
+if (index != -1) {
+console.log("banana is in the array");
+} else {
+console.log("banana is not in the array");
+}
+
+
+var array = ["first","second","third","forth"];
+o/p: ["first","second","fifth","sixth","forth"]

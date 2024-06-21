@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.audiance-reaction-custom-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.83%, rgba(0, 0, 0, 0.5) 83.35%);
+
+  }
+  
+  .aboutSurfing-custom-gradient {
+    background: linear-gradient(178.52deg, rgba(0, 0, 0, 0) 44.13%, rgba(0, 0, 0, 0.7) 82.27%);
+    }
+    .photograpy-photographylist-custom-shadow {
+      background: linear-gradient(178.52deg, rgba(0, 0, 0, 0) 1.13%, rgba(0, 0, 0, 0.7) 68.27%);
+      }
+  .gettoknow-custom-gradient {
+    background: linear-gradient(269.85deg, rgba(0, 0, 0, 0) -9.65%, rgba(0, 0, 0, 0.7) 58.3%);
+  }
+  
+  .hometopics-custom-gradient {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 100%, rgba(0, 0, 0, 0.7) 100%);
+  }
+  .current-slide {
+    width: 100px; /* Adjust this to the width you want */
+    background-color: red;
+    border: 2px solid blue;
+  }
+  .getintouch-custom-gradient {
+  background: linear-gradient(178.52deg, rgba(0, 0, 0, 0) 44.13%, rgba(0, 0, 0, 0.7) 82.35%);
+  }
+
+ 
+
+  
+.image-animation {
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  animation: image-fade-ina 2s cubic-bezier(0.18, 0.32, 0.47, 0.99) forwards;
+}
+
+@keyframes image-fade-ina {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    /* Add a small delay here */
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+
+  
+.image-animation4sec {
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  animation: image-fade-ina4 4s cubic-bezier(0.18, 0.32, 0.47, 0.99) forwards;
+}
+
+@keyframes image-fade-ina4 {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    /* Add a small delay here */
+    transition: opacity 0.10s ease-in-out;
+  }
+}
+
+
+
+.border-top-to-bottom-animation4sec {
+  clip-path: inset(0 0 100% 0); /* Start hidden from bottom */
+  opacity: 0;
+  animation: border-fade-ina4-top-to-bottom 4s cubic-bezier(0.18, 0.32, 0.47, 0.99) forwards;
+  
+}
+
+@keyframes border-fade-ina4-top-to-bottom {
+  from {
+    clip-path: inset(0 0 100% 0); /* Hiding from bottom */
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);  /* Fully revealed */
+    opacity: 1;
+  }
+}
+
+.border-bottom-to-top-animation4sec {
+  clip-path: inset(100% 0 0 0); /* Start hidden from top */
+  opacity: 0;
+  animation: border-bottom-to-top-ina4 4s cubic-bezier(0.18, 0.32, 0.47, 0.99) forwards;
+}
+
+@keyframes border-bottom-to-top-ina4 {
+  from {
+    clip-path: inset(100% 0 0 0); /* Hiding from top */
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);  /* Fully revealed */
+    opacity: 1;
+    /* Add a small delay here */
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+
+/* .grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: width("200px") } */
+
+.investments-portfolist-card-customeanimation{
+  transition: all .2s ease-in-out;  
+}
+
+

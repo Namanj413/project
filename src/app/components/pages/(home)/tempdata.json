@@ -1,0 +1,468 @@
+const tempdata = [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "dob": "1990-01-01",
+      "phone": "123-456-7890",
+      "address": "123 Main Street",
+      "state": "CA"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "dob": "1985-05-15",
+      "phone": "456-789-0123",
+      "address": "456 Oak Avenue",
+      "state": "NY"
+    },
+    {
+      "id": 3,
+      "name": "David Lee",
+      "dob": "1978-10-20",
+      "phone": "789-012-3456",
+      "address": "789 Pine Lane",
+      "state": "TX"
+    },
+    {
+      "id": 4,
+      "name": "Emily Brown",
+      "dob": "1995-03-08",
+      "phone": "012-345-6789",
+      "address": "012 Maple Drive",
+      "state": "FL"
+    },
+    {
+      "id": 5,
+      "name": "Michael Wilson",
+      "dob": "1982-12-25",
+      "phone": "345-678-9012",
+      "address": "345 Willow Street",
+      "state": "IL"
+    },
+    {
+      "id": 6,
+      "name": "Sarah Jones",
+      "dob": "1992-07-12",
+      "phone": "901-234-5678",
+      "address": "901 Elm Street",
+      "state": "PA"
+    },
+    {
+      "id": 7,
+      "name": "Christopher Garcia",
+      "dob": "1988-02-28",
+      "phone": "234-567-8901",
+      "address": "234 Pine Avenue",
+      "state": "OH"
+    },
+    {
+      "id": 8,
+      "name": "Jessica Davis",
+      "dob": "1997-09-18",
+      "phone": "567-890-1234",
+      "address": "567 Oak Lane",
+      "state": "MI"
+    },
+    {
+      "id": 9,
+      "name": "Matthew Rodriguez",
+      "dob": "1981-06-05",
+      "phone": "890-123-4567",
+      "address": "890 Maple Drive",
+      "state": "NJ"
+    },
+    {
+      "id": 10,
+      "name": "Ashley Williams",
+      "dob": "1994-11-22",
+      "phone": "123-456-7890",
+      "address": "123 Willow Street",
+      "state": "GA"
+    },
+    {
+      "id": 11,
+      "name": "Daniel Brown",
+      "dob": "1986-04-10",
+      "phone": "456-789-0123",
+      "address": "456 Elm Street",
+      "state": "AZ"
+    },
+    {
+      "id": 12,
+      "name": "Elizabeth Garcia",
+      "dob": "1999-08-26",
+      "phone": "789-012-3456",
+      "address": "789 Pine Avenue",
+      "state": "WA"
+    },
+    {
+      "id": 13,
+      "name": "Ryan Miller",
+      "dob": "1983-01-15",
+      "phone": "012-345-6789",
+      "address": "012 Oak Lane",
+      "state": "CO"
+    },
+    {
+      "id": 14,
+      "name": "Stephanie Davis",
+      "dob": "1996-05-20",
+      "phone": "345-678-9012",
+      "address": "345 Maple Drive",
+      "state": "MN"
+    },
+    {
+      "id": 15,
+      "name": "James Wilson",
+      "dob": "1980-10-08",
+      "phone": "901-234-5678",
+      "address": "901 Willow Street",
+      "state": "NC"
+    },
+    {
+      "id": 16,
+      "name": "Jennifer Rodriguez",
+      "dob": "1993-03-25",
+      "phone": "234-567-8901",
+      "address": "234 Elm Street",
+      "state": "SC"
+    },
+    {
+      "id": 17,
+      "name": "Kevin Garcia",
+      "dob": "1985-08-12",
+      "phone": "567-890-1234",
+      "address": "567 Pine Avenue",
+      "state": "VA"
+    },
+    {
+      "id": 18,
+      "name": "Amanda Miller",
+      "dob": "1998-02-01",
+      "phone": "890-123-4567",
+      "address": "890 Oak Lane",
+      "state": "OR"
+    },
+    {
+      "id": 19,
+      "name": "Joseph Davis",
+      "dob": "1982-07-07",
+      "phone": "123-456-7890",
+      "address": "123 Maple Drive",
+      "state": "KY"
+    },
+    {
+      "id": 20,
+      "name": "Brittany Williams",
+      "dob": "1995-12-16",
+      "phone": "456-789-0123",
+      "address": "456 Willow Street",
+      "state": "LA"
+    },
+    {
+      "id": 21,
+      "name": "Justin Brown",
+      "dob": "1987-05-03",
+      "phone": "789-012-3456",
+      "address": "789 Elm Street",
+      "state": "IN"
+    },
+    {
+      "id": 22,
+      "name": "Melissa Garcia",
+      "dob": "2000-09-09",
+      "phone": "012-345-6789",
+      "address": "012 Pine Avenue",
+      "state": "WI"
+    },
+    {
+      "id": 23,
+      "name": "Eric Miller",
+      "dob": "1984-03-18",
+      "phone": "345-678-9012",
+      "address": "345 Oak Lane",
+      "state": "AL"
+    },
+    {
+      "id": 24,
+      "name": "Tiffany Davis",
+      "dob": "1997-06-23",
+      "phone": "901-234-5678",
+      "address": "901 Maple Drive",
+      "state": "MA"
+    },
+    {
+      "id": 25,
+      "name": "Robert Wilson",
+      "dob": "1981-11-11",
+      "phone": "234-567-8901",
+      "address": "234 Willow Street",
+      "state": "CT"
+    },
+    {
+      "id": 26,
+      "name": "Lauren Rodriguez",
+      "dob": "1994-04-05",
+      "phone": "567-890-1234",
+      "address": "567 Elm Street",
+      "state": "MD"
+    },
+    {
+      "id": 27,
+      "name": "Brian Garcia",
+      "dob": "1986-09-13",
+      "phone": "890-123-4567",
+      "address": "890 Pine Avenue",
+      "state": "MO"
+    },
+    {
+      "id": 28,
+      "name": "Rachel Miller",
+      "dob": "1999-02-27",
+      "phone": "123-456-7890",
+      "address": "123 Oak Lane",
+      "state": "OK"
+    },
+    {
+        "id": 29,
+        "name": "Rachel Miller",
+        "dob": "1999-02-27",
+        "phone": "123-456-7890",
+        "address": "123 Oak Lane",
+        "state": "OK"
+      },
+      {
+        "id": 30,
+        "name": "Rachel Miller",
+        "dob": "1999-02-27",
+        "phone": "123-456-7890",
+        "address": "123 Oak Lane",
+        "state": "OK"
+      },
+    {
+        "id": 31,
+        "name": "John Doe",
+        "dob": "1990-01-01",
+        "phone": "123-456-7890",
+        "address": "123 Main Street",
+        "state": "CA"
+      },
+      {
+        "id": 32,
+        "name": "Jane Smith",
+        "dob": "1985-05-15",
+        "phone": "456-789-0123",
+        "address": "456 Oak Avenue",
+        "state": "NY"
+      },
+      {
+        "id": 33,
+        "name": "David Lee",
+        "dob": "1978-10-20",
+        "phone": "789-012-3456",
+        "address": "789 Pine Lane",
+        "state": "TX"
+      },
+      {
+        "id": 34,
+        "name": "Emily Brown",
+        "dob": "1995-03-08",
+        "phone": "012-345-6789",
+        "address": "012 Maple Drive",
+        "state": "FL"
+      },
+      {
+        "id": 35,
+        "name": "Michael Wilson",
+        "dob": "1982-12-25",
+        "phone": "345-678-9012",
+        "address": "345 Willow Street",
+        "state": "IL"
+      },
+      {
+        "id": 36,
+        "name": "Sarah Jones",
+        "dob": "1992-07-12",
+        "phone": "901-234-5678",
+        "address": "901 Elm Street",
+        "state": "PA"
+      },
+      {
+        "id": 37,
+        "name": "Christopher Garcia",
+        "dob": "1988-02-28",
+        "phone": "234-567-8901",
+        "address": "234 Pine Avenue",
+        "state": "OH"
+      },
+      {
+        "id": 38,
+        "name": "Jessica Davis",
+        "dob": "1997-09-18",
+        "phone": "567-890-1234",
+        "address": "567 Oak Lane",
+        "state": "MI"
+      },
+      {
+        "id": 39,
+        "name": "Matthew Rodriguez",
+        "dob": "1981-06-05",
+        "phone": "890-123-4567",
+        "address": "890 Maple Drive",
+        "state": "NJ"
+      },
+      {
+        "id": 40,
+        "name": "Ashley Williams",
+        "dob": "1994-11-22",
+        "phone": "123-456-7890",
+        "address": "123 Willow Street",
+        "state": "GA"
+      },
+      {
+        "id": 41,
+        "name": "Daniel Brown",
+        "dob": "1986-04-10",
+        "phone": "456-789-0123",
+        "address": "456 Elm Street",
+        "state": "AZ"
+      },
+      {
+        "id": 42,
+        "name": "Elizabeth Garcia",
+        "dob": "1999-08-26",
+        "phone": "789-012-3456",
+        "address": "789 Pine Avenue",
+        "state": "WA"
+      },
+      {
+        "id": 43,
+        "name": "Ryan Miller",
+        "dob": "1983-01-15",
+        "phone": "012-345-6789",
+        "address": "012 Oak Lane",
+        "state": "CO"
+      },
+      {
+        "id": 44,
+        "name": "Stephanie Davis",
+        "dob": "1996-05-20",
+        "phone": "345-678-9012",
+        "address": "345 Maple Drive",
+        "state": "MN"
+      },
+      {
+        "id": 45,
+        "name": "James Wilson",
+        "dob": "1980-10-08",
+        "phone": "901-234-5678",
+        "address": "901 Willow Street",
+        "state": "NC"
+      },
+      {
+        "id": 46,
+        "name": "Jennifer Rodriguez",
+        "dob": "1993-03-25",
+        "phone": "234-567-8901",
+        "address": "234 Elm Street",
+        "state": "SC"
+      },
+      {
+        "id": 47,
+        "name": "Kevin Garcia",
+        "dob": "1985-08-12",
+        "phone": "567-890-1234",
+        "address": "567 Pine Avenue",
+        "state": "VA"
+      },
+      {
+        "id": 48,
+        "name": "Amanda Miller",
+        "dob": "1998-02-01",
+        "phone": "890-123-4567",
+        "address": "890 Oak Lane",
+        "state": "OR"
+      },
+      {
+        "id": 49,
+        "name": "Joseph Davis",
+        "dob": "1982-07-07",
+        "phone": "123-456-7890",
+        "address": "123 Maple Drive",
+        "state": "KY"
+      },
+      {
+        "id": 50,
+        "name": "Brittany Williams",
+        "dob": "1995-12-16",
+        "phone": "456-789-0123",
+        "address": "456 Willow Street",
+        "state": "LA"
+      },
+      {
+        "id": 51,
+        "name": "Justin Brown",
+        "dob": "1987-05-03",
+        "phone": "789-012-3456",
+        "address": "789 Elm Street",
+        "state": "IN"
+      },
+      {
+        "id": 52,
+        "name": "Melissa Garcia",
+        "dob": "2000-09-09",
+        "phone": "012-345-6789",
+        "address": "012 Pine Avenue",
+        "state": "WI"
+      },
+      {
+        "id": 53,
+        "name": "Eric Miller",
+        "dob": "1984-03-18",
+        "phone": "345-678-9012",
+        "address": "345 Oak Lane",
+        "state": "AL"
+      },
+      {
+        "id": 54,
+        "name": "Tiffany Davis",
+        "dob": "1997-06-23",
+        "phone": "901-234-5678",
+        "address": "901 Maple Drive",
+        "state": "MA"
+      },
+      {
+        "id": 55,
+        "name": "Robert Wilson",
+        "dob": "1981-11-11",
+        "phone": "234-567-8901",
+        "address": "234 Willow Street",
+        "state": "CT"
+      },
+      {
+        "id": 56,
+        "name": "Lauren Rodriguez",
+        "dob": "1994-04-05",
+        "phone": "567-890-1234",
+        "address": "567 Elm Street",
+        "state": "MD"
+      },
+      {
+        "id": 57,
+        "name": "Brian Garcia",
+        "dob": "1986-09-13",
+        "phone": "890-123-4567",
+        "address": "890 Pine Avenue",
+        "state": "MO"
+      },
+      {
+        "id": 58,
+        "name": "Rachel Miller",
+        "dob": "1999-02-27",
+        "phone": "123-456-7890",
+        "address": "123 Oak Lane",
+        "state": "OK"
+      }
+]
+
+export default tempdata;
